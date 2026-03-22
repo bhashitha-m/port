@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Linkedin, Github, Instagram, MessageCircle, Facebook, AtSign, Code, Database, PenTool, Users, Layout, Lightbulb, Menu, X } from 'lucide-react';
 import TypewriterText from './components/TypewriterText';
 import ScrollReveal from './components/ScrollReveal';
 import MouseTrail from './components/MouseTrail';
@@ -10,12 +11,11 @@ import { Particles } from './registry/magicui/particles';
 import { HyperText } from './registry/magicui/hyper-text';
 import { BorderBeam } from './registry/magicui/border-beam';
 import { ShineBorder } from './registry/magicui/shine-border';
-import { Code, Database, PenTool, Users, Layout, Lightbulb } from 'lucide-react';
-import { Linkedin, Github, Instagram } from 'lucide-react';
 emailjs.init('tcUnROxGRHeHMNya6');
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,56 +92,168 @@ export default function Home() {
         </div>
       </a>
 
-      {/* Navigation Bar with Border Beam */}
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[100]">
-        <BorderBeam className="rounded-full w-auto">
-          <nav className="flex flex-row items-center justify-center gap-6 px-8 py-3 bg-[#0c0c1d]/60 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl whitespace-nowrap">
-            <div className="flex flex-row gap-6 text-gray-400 text-xs font-medium">
-              <a 
-                href="#home" 
-                onClick={scrollToTop} 
-                className={`nav-link transition ${activeSection === 'home' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+      {/* Navigation Bar - Responsive */}
+      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-full px-4 md:w-auto md:px-0">
+        {/* Desktop Navbar */}
+        <div className="hidden md:block">
+          <BorderBeam className="rounded-full w-auto">
+            <nav className="flex flex-row items-center justify-center gap-6 px-8 py-3 bg-[#0c0c1d]/60 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl whitespace-nowrap">
+              <div className="flex flex-row gap-6 text-gray-400 text-xs font-medium">
+                <a 
+                  href="#home" 
+                  onClick={scrollToTop} 
+                  className={`nav-link transition ${activeSection === 'home' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+                >
+                  Home
+                </a>
+                <a 
+                  href="#who-i-am" 
+                  className={`nav-link transition ${activeSection === 'who-i-am' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+                >
+                  Who I Am
+                </a>
+                <a 
+                  href="#skills" 
+                  className={`nav-link transition ${activeSection === 'skills' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+                >
+                  Skill
+                </a>
+                <a 
+                  href="#projects" 
+                  className={`nav-link transition ${activeSection === 'projects' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+                >
+                  Project
+                </a>
+                <a 
+                  href="#timeline" 
+                  className={`nav-link transition ${activeSection === 'timeline' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+                >
+                  Timeline
+                </a>
+                <a 
+                  href="#volunteer" 
+                  className={`nav-link transition ${activeSection === 'volunteer' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+                >
+                  Volunteer
+                </a>
+              </div>
+              
+              <a href="#contact" className="bg-white text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-gray-200 transition inline-block">
+                Contact 
+              </a>
+            </nav>
+          </BorderBeam>
+        </div>
+
+        {/* Mobile Navbar */}
+        <div className="md:hidden flex items-center justify-between px-4 py-3 bg-[#0c0c1d]/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
+          <div className="text-white font-bold text-sm">Menu</div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 text-white hover:text-orange-500 transition"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X size={24} />
+            ) : (
+              <Menu size={24} />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu - Slide Out */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+          className="fixed top-20 left-0 right-0 z-50 md:hidden"
+        >
+          <div className="mx-4 bg-[#0c0c1d]/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4">
+            <nav className="flex flex-col gap-4">
+              <a
+                href="#home"
+                onClick={(e) => {
+                  scrollToTop(e);
+                  setMobileMenuOpen(false);
+                }}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition ${
+                  activeSection === 'home'
+                    ? 'text-orange-500 font-bold bg-white/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 Home
               </a>
-              <a 
-                href="#who-i-am" 
-                className={`nav-link transition ${activeSection === 'who-i-am' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+              <a
+                href="#who-i-am"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition ${
+                  activeSection === 'who-i-am'
+                    ? 'text-orange-500 font-bold bg-white/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 Who I Am
               </a>
-              <a 
-                href="#skills" 
-                className={`nav-link transition ${activeSection === 'skills' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+              <a
+                href="#skills"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition ${
+                  activeSection === 'skills'
+                    ? 'text-orange-500 font-bold bg-white/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 Skill
               </a>
-              <a 
-                href="#projects" 
-                className={`nav-link transition ${activeSection === 'projects' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+              <a
+                href="#projects"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition ${
+                  activeSection === 'projects'
+                    ? 'text-orange-500 font-bold bg-white/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 Project
               </a>
-              <a 
-                href="#timeline" 
-                className={`nav-link transition ${activeSection === 'timeline' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+              <a
+                href="#timeline"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition ${
+                  activeSection === 'timeline'
+                    ? 'text-orange-500 font-bold bg-white/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 Timeline
               </a>
-              <a 
-                href="#volunteer" 
-                className={`nav-link transition ${activeSection === 'volunteer' ? 'text-orange-500 font-bold' : 'hover:text-white'}`}
+              <a
+                href="#volunteer"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition ${
+                  activeSection === 'volunteer'
+                    ? 'text-orange-500 font-bold bg-white/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
               >
                 Volunteer
               </a>
-            </div>
-            
-            <a href="#contact" className="bg-white text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-gray-200 transition inline-block">
-              Contact 
-            </a>
-          </nav>
-        </BorderBeam>
-      </div>
+              <div className="border-t border-white/10 my-2"></div>
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 px-4 rounded-lg text-sm font-bold bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:opacity-90 transition text-center"
+              >
+                Contact
+              </a>
+            </nav>
+          </div>
+        </motion.div>
+      )}
 
       {/* Hero Section */}
       <section id="home" className="relative z-10 flex flex-col items-center justify-center py-24 px-4 text-center min-h-screen overflow-hidden scroll-mt-20">
@@ -191,9 +303,9 @@ export default function Home() {
 
         {/* Action Buttons */}
         <div className="flex gap-4 z-20">
-          <button className="bg-gradient-to-r from-purple-600 to-pink-500 px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition shadow-xl shadow-purple-500/20">
+          <a href="https://drive.google.com/uc?export=download&id=1yxsSpm_D4OvRLTtB-q1MsPENtplHbp3e" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-purple-600 to-pink-500 px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition shadow-xl shadow-purple-500/20 inline-flex items-center">
             Resume
-          </button>
+          </a>
           <a href="#projects" className="bg-white/10 border border-white/30 px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition shadow-xl shadow-purple-500/20 inline-flex items-center">
             Projects 
           </a>
@@ -238,9 +350,9 @@ export default function Home() {
 
           {/* Resume Button - Below the Card */}
           <div className="flex justify-center mt-12">
-            <button className="bg-gradient-to-r from-orange-600 to-pink-500 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-orange-500/30 max-w-[200px]">
+            <a href="https://drive.google.com/uc?export=download&id=1yxsSpm_D4OvRLTtB-q1MsPENtplHbp3e" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-orange-600 to-pink-500 px-6 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-orange-500/30 max-w-[200px] inline-flex items-center">
                Resume 
-            </button>
+            </a>
           </div>
         </section>
       </ScrollReveal>
@@ -567,21 +679,22 @@ export default function Home() {
 <div className="flex flex-col items-center gap-3 mt-8">
   
   {/* LinkedIn Tab */}
-  <a href="#" className="flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-blue-500/50 transition-all group w-64">
+  <a href="https://www.linkedin.com/in/bhashitha-manuppriya-980918276" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-blue-500/50 transition-all group w-64">
     <Linkedin size={16} className="text-blue-400 group-hover:scale-110 transition-transform" />
     <span className="text-gray-400 text-[11px] group-hover:text-white">/bhashitha-manuppriya</span>
   </a>
 
   {/* GitHub Tab */}
-  <a href="#" className="flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-purple-500/50 transition-all group w-64">
+  <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-purple-500/50 transition-all group w-64">
     <Github size={16} className="text-purple-400 group-hover:scale-110 transition-transform" />
-    <span className="text-gray-400 text-[11px] group-hover:text-white">/bhashitha-manuppriya</span>
+    <span className="text-gray-400 text-[11px] group-hover:text-white">/bhashitha-m</span>
   </a>
 
+
   {/* Instagram Tab */}
-  <a href="#" className="flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-pink-500/50 transition-all group w-64">
+  <a href="https://www.instagram.com/bhashithamanuppriya?utm_source=qr&igsh=dnV1MmJtZXY2Nmwx" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-pink-500/50 transition-all group w-64">
     <Instagram size={16} className="text-pink-400 group-hover:scale-110 transition-transform" />
-    <span className="text-gray-400 text-[11px] group-hover:text-white">/bhashitha_manuppriya</span>
+    <span className="text-gray-400 text-[11px] group-hover:text-white">@bhashithamanuppriya</span>
   </a>
 
 </div>
@@ -590,7 +703,7 @@ export default function Home() {
  
 {/* --- FULL-WIDTH FIXED FOOTER BAR --- */}
 <footer className="w-full bg-[#0c0c1d]/60 border-t border-white/10 backdrop-blur-xl py-6 mt-auto">
-  {/* max-w එක වැඩි කරලා px-4 දැම්මම ලෝගෝ එක තවත් වමට යනවා */}
+  
   <div className="max-w-[98%] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
     
     {/* Left: Logo with Orange Dot */}
@@ -607,9 +720,27 @@ export default function Home() {
       </p>
     </div>
 
-    {/* Right: Invisible spacer for perfect centering */}
-    <div className="hidden md:block flex-1"></div>
-
+    {/* Right: Social Media Icons */}
+<div className="flex-1 flex justify-center md:justify-end gap-5">
+  <a href="https://linkedin.com/in/bhashitha-manuppriya-980918276" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-all hover:scale-110">
+    <Linkedin size={18} />
+  </a>
+  <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all hover:scale-110">
+    <Github size={18} />
+  </a>
+  <a href="https://wa.me/94711096839" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-all hover:scale-110">
+    <MessageCircle size={18} />
+  </a>
+  <a href="https://web.facebook.com/bhashitha.manuppriya.3/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-all hover:scale-110">
+    <Facebook size={18} />
+  </a>
+  <a href="https://www.threads.net/@bhashithamanuppriya" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all hover:scale-110">
+    <AtSign size={18} />
+  </a>
+  <a href="https://www.instagram.com/bhashithamanuppriya?utm_source=qr&igsh=dnV1MmJtZXY2Nmwx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-all hover:scale-110">
+    <Instagram size={18} />
+  </a>
+</div>
   </div>
 </footer>
 
