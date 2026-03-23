@@ -323,7 +323,7 @@ export default function Home() {
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white">Who I Am</h2>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  "I am a <span className="text-orange-500 font-bold">3rd-year Software Engineering undergraduate at OUSL</span> with a deep passion for building scalable digital solutions. Complementing my academic foundation, I am specializing in <span className="text-orange-400 font-bold">Full-Stack Development at the University of Moratuwa</span>. With hands-on experience in Python, Java, React, Next.js, and JavaScript, I thrive on solving complex problems through clean, efficient code. I am currently seeking internship opportunities to apply my technical skills in a professional environment and contribute to impactful projects."
+                  &quot;I am a <span className="text-orange-500 font-bold">3rd-year Software Engineering undergraduate at OUSL</span> with a deep passion for building scalable digital solutions. Complementing my academic foundation, I am specializing in <span className="text-orange-400 font-bold">Full-Stack Development at the University of Moratuwa</span>. With hands-on experience in Python, Java, React, Next.js, and JavaScript, I thrive on solving complex problems through clean, efficient code. I am currently seeking internship opportunities to apply my technical skills in a professional environment and contribute to impactful projects.&quot;
                 </p>
               </div>
 
@@ -677,7 +677,7 @@ export default function Home() {
     
     <p className="text-gray-1000 text-[12px] tracking-[0.3em] uppercase mb-1">Get In Touch</p>
     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-      I'd love to <span className="text-orange-500 italic">hear from you!</span>
+      I&apos;d love to <span className="text-orange-500 italic">hear from you!</span>
     </h2>
 
     {/* --- COMPACT FORM WITH GRID --- */}

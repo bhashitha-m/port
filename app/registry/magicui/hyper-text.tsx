@@ -8,7 +8,7 @@ interface HyperTextProps {
   delay?: number;
 }
 
-export function HyperText({ children, className, duration = 100, delay = 10000 }: HyperTextProps) {
+export function HyperText({ children, className, duration = 100 }: HyperTextProps) {
   return (
     <span
       className={className}
