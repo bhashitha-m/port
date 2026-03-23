@@ -267,7 +267,7 @@ export default function Home() {
         
         {/* "Hey I'm" text */}
         <p className="text-gray-400 text-lg md:text-xl mb-3 tracking-[0.2em] uppercase font-bold relative z-20">
-          Hey 👋 I'm 
+          Hey 👋 I&apos;m 
         </p>
         
         {/* Name with HyperText */}
