@@ -46,10 +46,10 @@ export default function Home() {
         'template_jdoc5ed', 
         form.current
       )
-      .then((result: any) => {
+      .then((_: any) => {
           alert("Send massage successfully! I'll get back to you soon. ");
           form.current?.reset(); // Form එක හිස් කරන්න
-      }, (error: any) => {
+      }, (_error: any) => {
           alert("Try again! Something went wrong.");
       });
     }
