@@ -493,70 +493,70 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             
             {/* Project 1: Personal Portfolio */}
-            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 hover:from-purple-500/30 hover:to-purple-500/10 transition-all duration-300">
+            <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="group relative p-[1px] rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 hover:from-purple-500/30 hover:to-purple-500/10 transition-all duration-300 block">
               <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
                 <div>
                   <h4 className="text-purple-400 font-black text-sm uppercase tracking-tight mb-2">Personal Portfolio</h4>
                   <p className="text-gray-400 text-xs line-clamp-2">Interactive portfolio with glassmorphism effects and smooth animations.</p>
                 </div>
-                <a href="#" className="text-purple-400 hover:text-purple-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+                <span className="text-purple-400 hover:text-purple-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</span>
               </div>
-            </div>
+            </a>
 
             {/* Project 2: Vehicle Booking */}
-            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-pink-500/20 to-pink-500/5 hover:from-pink-500/30 hover:to-pink-500/10 transition-all duration-300">
+            <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="group relative p-[1px] rounded-xl bg-gradient-to-br from-pink-500/20 to-pink-500/5 hover:from-pink-500/30 hover:to-pink-500/10 transition-all duration-300 block">
               <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
                 <div>
                   <h4 className="text-pink-400 font-black text-sm uppercase tracking-tight mb-2">Vehicle Booking</h4>
                   <p className="text-gray-400 text-xs line-clamp-2">Python console app for intelligent vehicle rental management.</p>
                 </div>
-                <a href="#" className="text-pink-400 hover:text-pink-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+                <span className="text-pink-400 hover:text-pink-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</span>
               </div>
-            </div>
+            </a>
 
-            {/* Project 3: Task Manager */}
-            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 hover:from-emerald-500/30 hover:to-emerald-500/10 transition-all duration-300">
+            {/* Project 3: Modern Calculator */}
+            <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="group relative p-[1px] rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 hover:from-emerald-500/30 hover:to-emerald-500/10 transition-all duration-300 block">
               <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-emerald-400 font-black text-sm uppercase tracking-tight mb-2">Task Manager</h4>
+                  <h4 className="text-emerald-400 font-black text-sm uppercase tracking-tight mb-2">Modern Calculator</h4>
                   <p className="text-gray-400 text-xs line-clamp-2">Full-stack app for managing projects and team tasks efficiently.</p>
                 </div>
-                <a href="#" className="text-emerald-400 hover:text-emerald-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+                <span className="text-emerald-400 hover:text-emerald-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</span>
               </div>
-            </div>
+            </a>
 
             {/* Project 4: Weather Dashboard */}
-            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 hover:from-blue-500/30 hover:to-blue-500/10 transition-all duration-300">
+            <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="group relative p-[1px] rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 hover:from-blue-500/30 hover:to-blue-500/10 transition-all duration-300 block">
               <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
                 <div>
                   <h4 className="text-blue-400 font-black text-sm uppercase tracking-tight mb-2">Weather Dashboard</h4>
                   <p className="text-gray-400 text-xs line-clamp-2">Real-time weather data visualization with geolocation API.</p>
                 </div>
-                <a href="#" className="text-blue-400 hover:text-blue-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+                <span className="text-blue-400 hover:text-blue-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</span>
               </div>
-            </div>
+            </a>
 
             {/* Project 5: E-commerce Store */}
-            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-orange-500/20 to-orange-500/5 hover:from-orange-500/30 hover:to-orange-500/10 transition-all duration-300">
+            <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="group relative p-[1px] rounded-xl bg-gradient-to-br from-orange-500/20 to-orange-500/5 hover:from-orange-500/30 hover:to-orange-500/10 transition-all duration-300 block">
               <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-orange-400 font-black text-sm uppercase tracking-tight mb-2">E-commerce Store</h4>
+                  <h4 className="text-orange-400 font-black text-sm uppercase tracking-tight mb-2">Expense Tracker Master</h4>
                   <p className="text-gray-400 text-xs line-clamp-2">Next.js e-commerce platform with Stripe payment integration.</p>
                 </div>
-                <a href="#" className="text-orange-400 hover:text-orange-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+                <span className="text-orange-400 hover:text-orange-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</span>
               </div>
-            </div>
+            </a>
 
-            {/* Project 6: Chat Application */}
-            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-500/5 hover:from-indigo-500/30 hover:to-indigo-500/10 transition-all duration-300">
+            {/* Project 6: MindQuiz */}
+            <a href="https://github.com/bhashitha-m" target="_blank" rel="noopener noreferrer" className="group relative p-[1px] rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-500/5 hover:from-indigo-500/30 hover:to-indigo-500/10 transition-all duration-300 block">
               <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-indigo-400 font-black text-sm uppercase tracking-tight mb-2">Chat Application</h4>
+                  <h4 className="text-indigo-400 font-black text-sm uppercase tracking-tight mb-2">MindQuiz</h4>
                   <p className="text-gray-400 text-xs line-clamp-2">Real-time messaging app with WebSocket and user authentication.</p>
                 </div>
-                <a href="#" className="text-indigo-400 hover:text-indigo-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+                <span className="text-indigo-400 hover:text-indigo-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</span>
               </div>
-            </div>
+            </a>
 
           </div>
         </section>
@@ -647,11 +647,17 @@ export default function Home() {
               { title: "JAMBORIEEE 2025", desc: "Organizing Committee (Secretary Team) - IEEE OUSL", icon: "📝" },
               { title: "SLASSCOM 2024", desc: "TV Program Representation - The Open University", icon: "📺" }
             ].map((item, index) => (
-              <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-lg hover:border-purple-500/50 transition-all duration-500 group">
+              <a 
+              key={index} 
+              href="https://www.linkedin.com/in/bhashitha-manuppriya-980918276" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block p-6 bg-white/5 border border-white/10 rounded-lg hover:border-blue-500/50 hover:scale-[1.02] hover:bg-white/[0.08] transition-all duration-500 group"
+            >
                 <div className="text-3xl mb-3 group-hover:scale-110 transition">{item.icon}</div>
                 <h4 className="text-white font-bold text-sm mb-1">{item.title}</h4>
                 <p className="text-gray-400 text-xs">{item.desc}</p>
-              </div>
+              </a>
             ))}
           </div>
         </section>
