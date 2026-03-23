@@ -487,37 +487,79 @@ export default function Home() {
       {/* --- Projects Section --- */}
       <ScrollReveal delay={0.3}>
         <section id="projects" className="relative z-10 max-w-6xl mx-auto px-6 py-24 min-h-screen flex flex-col justify-center scroll-mt-20">
-        <h2 className="text-white text-2xl md:text-3xl font-black mb-12 uppercase tracking-tighter text-center">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="group bg-[#0c0c1d] border border-white/10 rounded-lg overflow-hidden hover:border-purple-500/50 transition-all duration-500">
-            <div className="h-28 bg-gradient-to-br from-purple-900/20 to-transparent p-3 flex items-end">
-              <h4 className="text-white text-base font-black uppercase">Personal Portfolio</h4>
+          <h2 className="text-white text-2xl md:text-3xl font-black mb-12 uppercase tracking-tighter text-center">Projects</h2>
+          
+          {/* Projects Grid - Responsive 1, 2, 3 columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            
+            {/* Project 1: Personal Portfolio */}
+            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-500/5 hover:from-purple-500/30 hover:to-purple-500/10 transition-all duration-300">
+              <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-purple-400 font-black text-sm uppercase tracking-tight mb-2">Personal Portfolio</h4>
+                  <p className="text-gray-400 text-xs line-clamp-2">Interactive portfolio with glassmorphism effects and smooth animations.</p>
+                </div>
+                <a href="#" className="text-purple-400 hover:text-purple-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+              </div>
             </div>
-            <div className="p-3">
-              <p className="text-gray-500 text-xs mb-3">A modern interactive portfolio website with smooth animations, glassmorphism effects, and premium dark aesthetic design.</p>
-              <span className="text-purple-400 text-[9px] font-bold tracking-widest">NEXT.JS / TAILWIND / FRAMER MOTION</span>
+
+            {/* Project 2: Vehicle Booking */}
+            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-pink-500/20 to-pink-500/5 hover:from-pink-500/30 hover:to-pink-500/10 transition-all duration-300">
+              <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-pink-400 font-black text-sm uppercase tracking-tight mb-2">Vehicle Booking</h4>
+                  <p className="text-gray-400 text-xs line-clamp-2">Python console app for intelligent vehicle rental management.</p>
+                </div>
+                <a href="#" className="text-pink-400 hover:text-pink-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+              </div>
             </div>
+
+            {/* Project 3: Task Manager */}
+            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 hover:from-emerald-500/30 hover:to-emerald-500/10 transition-all duration-300">
+              <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-emerald-400 font-black text-sm uppercase tracking-tight mb-2">Task Manager</h4>
+                  <p className="text-gray-400 text-xs line-clamp-2">Full-stack app for managing projects and team tasks efficiently.</p>
+                </div>
+                <a href="#" className="text-emerald-400 hover:text-emerald-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+              </div>
+            </div>
+
+            {/* Project 4: Weather Dashboard */}
+            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 hover:from-blue-500/30 hover:to-blue-500/10 transition-all duration-300">
+              <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-blue-400 font-black text-sm uppercase tracking-tight mb-2">Weather Dashboard</h4>
+                  <p className="text-gray-400 text-xs line-clamp-2">Real-time weather data visualization with geolocation API.</p>
+                </div>
+                <a href="#" className="text-blue-400 hover:text-blue-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+              </div>
+            </div>
+
+            {/* Project 5: E-commerce Store */}
+            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-orange-500/20 to-orange-500/5 hover:from-orange-500/30 hover:to-orange-500/10 transition-all duration-300">
+              <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-orange-400 font-black text-sm uppercase tracking-tight mb-2">E-commerce Store</h4>
+                  <p className="text-gray-400 text-xs line-clamp-2">Next.js e-commerce platform with Stripe payment integration.</p>
+                </div>
+                <a href="#" className="text-orange-400 hover:text-orange-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+              </div>
+            </div>
+
+            {/* Project 6: Chat Application */}
+            <div className="group relative p-[1px] rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-500/5 hover:from-indigo-500/30 hover:to-indigo-500/10 transition-all duration-300">
+              <div className="bg-[#050510]/90 backdrop-blur-xl rounded-[11px] p-4 h-32 flex flex-col justify-between">
+                <div>
+                  <h4 className="text-indigo-400 font-black text-sm uppercase tracking-tight mb-2">Chat Application</h4>
+                  <p className="text-gray-400 text-xs line-clamp-2">Real-time messaging app with WebSocket and user authentication.</p>
+                </div>
+                <a href="#" className="text-indigo-400 hover:text-indigo-300 text-[10px] font-bold uppercase tracking-widest inline-block hover:underline">Source Code →</a>
+              </div>
+            </div>
+
           </div>
-          <div className="group bg-[#0c0c1d] border border-white/10 rounded-lg overflow-hidden hover:border-pink-500/50 transition-all duration-500">
-            <div className="h-28 bg-gradient-to-br from-pink-900/20 to-transparent p-3 flex items-end">
-              <h4 className="text-white text-base font-black uppercase">Vehicle Booking</h4>
-            </div>
-            <div className="p-3">
-              <p className="text-gray-500 text-xs mb-3">A Python-based console application to manage vehicle hiring with intelligent filtering based on customer seating capacity and A/C preferences.</p>
-              <span className="text-pink-400 text-[9px] font-bold tracking-widest">PYTHON / CONSOLE APP</span>
-            </div>
-          </div>
-          <div className="group bg-[#0c0c1d] border border-white/10 rounded-lg overflow-hidden hover:border-blue-500/50 transition-all duration-500">
-            <div className="h-28 bg-gradient-to-br from-blue-900/20 to-transparent p-3 flex items-end">
-              <h4 className="text-white text-base font-black uppercase">Upcoming</h4>
-            </div>
-            <div className="p-3">
-              <p className="text-gray-500 text-xs mb-3">An exciting new project in development. Stay tuned for an innovative solution that will showcase advanced technical capabilities.</p>
-              <span className="text-blue-400 text-[9px] font-bold tracking-widest">COMING SOON</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
       </ScrollReveal>
 
       {/* --- Timeline Section (Education & Experience) --- */}
